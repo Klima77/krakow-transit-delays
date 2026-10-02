@@ -18,3 +18,5 @@ analysis = [
 [tool.uv]
 # uv cache (C:) and project (D:) are on different drives, so hardlinks are impossible
 link-mode = "copy"
+# Install the analysis tools by default on the laptop; the VPS gets only core dependencies
+default-groups = ["analysis"]
