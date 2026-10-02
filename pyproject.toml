@@ -1,0 +1,20 @@
+[project]
+name = "krakow-transit-delays"
+version = "0.1.0"
+description = "Kraków public transport: live map, probabilistic delay prediction, journey planning"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "gtfs-realtime-bindings>=3.0.0",
+    "requests>=2.34.2",
+]
+
+[dependency-groups]
+analysis = [
+    "pandas>=3.0.6",
+    "pyarrow>=25.0.1",
+]
+
+[tool.uv]
+# uv cache (C:) and project (D:) are on different drives, so hardlinks are impossible
+link-mode = "copy"
